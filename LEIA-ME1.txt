@@ -1,0 +1,31 @@
+PROVISÃO — como usar
+
+O QUE É
+Um app de arquivo único (index.html) para qualquer família ou grupo planejar a provisão de comida, água, remédios e itens essenciais, mês a mês. Não tem servidor central: cada família guarda os próprios dados, no celular ou no próprio banco.
+
+COMO PUBLICAR (uma vez)
+Para o app abrir em qualquer celular, funcionar offline e permitir links de convite, publique a pasta em um endereço da internet. Opções gratuitas: Netlify Drop (arraste a pasta), Cloudflare Pages ou GitHub Pages. Mantenha index.html e sw.js juntos.
+
+DOIS JEITOS DE USAR
+1) Só neste celular: responda às perguntas e use. Os dados ficam no navegador do aparelho. Se limpar os dados do navegador ou trocar de celular, perde tudo.
+2) Banco próprio do grupo (várias casas): o app guia você.
+   - Crie uma conta gratuita em supabase.com e um projeto novo.
+   - Em Project Settings > API, copie o endereço do projeto e a chave PÚBLICA (publishable ou anon). Nunca use a chave secreta ou service_role (o app recusa).
+   - No app, informe as casas. Ele gera o SQL, as senhas provisórias e o código de recuperação.
+   - Cole o SQL no SQL Editor do Supabase e toque em Run. Volte ao app e toque em "Já rodei o SQL".
+   - Entre com a casa administradora. Em Conta > Convidar casas, copie o link de convite e envie às outras casas junto com o usuário e a senha provisória de cada uma.
+
+REENVIO AUTOMÁTICO
+Quem começou "só neste celular" e depois conecta um banco: assim que entrar, o app oferece enviar tudo (estoque, conferências, saúde e documentos) para o banco. O que o banco já tiver não é sobrescrito, e o que foi enviado sai do celular.
+
+PRIVACIDADE
+- Cada grupo usa o seu próprio banco. Um grupo não acessa o de outro.
+- O link de convite leva só o endereço e a chave pública do projeto. Não leva senhas.
+- Documentos de cada casa só abrem para a própria casa. Em alerta, RG/CNH e saúde básica de todas as casas abrem para o grupo; os demais só se a casa liberar.
+- O SQL gerado contém as senhas provisórias. Não publique esse texto.
+- Guarde o código de recuperação em papel: ele recupera o acesso da casa administradora.
+
+OBSERVAÇÕES HONESTAS
+- Projetos gratuitos do Supabase são pausados após cerca de uma semana sem uso. Usar o app toda semana evita; se pausar, é só restaurar no painel do Supabase.
+- O volume de armazenamento é uma estimativa. Meça o seu espaço antes de comprar.
+- Quantidades de remédios, suplementos e itens de bebê são referências gerais. Confirme com o médico ou o pediatra.
